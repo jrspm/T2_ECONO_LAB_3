@@ -266,3 +266,102 @@ plot(dataset$Chance.of.Admit, dataset$CGPA, pch = 16, col = "gray", xlab = "x3",
 ## -------------- RESPUESTA 6 -----------------------------
 
 
+## • Chance of Admit ~ TOEFEL.Score.
+```{r}
+lm1<-dataset %>%
+  lm(formula = Chance.of.Admit ~ TOEFL.Score)
+
+summ_lm1<-summary(lm1)
+summ_lm1
+```
+## • Chance of Admit ~ CGPA.
+```{r}
+lm2<-dataset %>%
+  lm(formula = Chance.of.Admit ~ CGPA)
+
+summ_lm2<-summary(lm2)
+summ_lm2
+```
+## • Chance of Admit ~ GRE.Score.
+```{r}
+lm3<-dataset %>%
+  lm(formula = Chance.of.Admit ~ GRE.Score)
+
+summ_lm3<-summary(lm3)
+summ_lm3
+```
+## • Chance of Admit ~ TOEFEL.Score + CGPA
+```{r}
+lm4<-dataset %>%
+  lm(formula = Chance.of.Admit ~ TOEFL.Score + CGPA)
+
+summ_lm4<-summary(lm4)
+summ_lm4
+```
+## • Chance of Admit ~ TOEFEL.Score + GRE.Score.
+```{r}
+lm5<-dataset %>%
+  lm(formula = Chance.of.Admit ~ TOEFL.Score + GRE.Score)
+
+summ_lm5<-summary(lm5)
+summ_lm5
+```
+## • Chance of Admit ~ GRE.Score + CGPA.
+
+```{r}
+lm6<-dataset %>%
+  lm(formula = Chance.of.Admit ~ GRE.Score + CGPA)
+
+summ_lm6<-summary(lm6)
+summ_lm6
+```
+## • Chance of Admit ~ TOEFEL.Score + CGPA + GRE.Score.
+```{r}
+lm7<-dataset %>%
+  lm(formula = Chance.of.Admit ~ TOEFL.Score + GRE.Score + CGPA)
+
+summ_lm7<-summary(lm7)
+summ_lm7
+```
+
+## -----------------------   EJERICICIO 3 ----------------------------
+## -----------------------   PREGUNTA 1 ----------------------------
+
+## Modelo #1:
+
+## -------------- RESPUESTA 1 -----------------------------
+
+
+![modelo_1](modelo_1.png){width=width height=height}
+El valor 1 indica la probabilidad que tiene el modelo de que sea mayor a 2.5 el valor de t.
+El valor 2 debe ser mayor a 5.
+El valor 3 indica el R2, este debe ser mayor a 0.55
+El valor 4 indica el error encontrado en el modelo, (la distancia que hay del modelo al punto lejano)
+Por lo que para el modelo 1 la variable UNEM, no es significativa para nuestro modelo.
+
+![modelo_1](modelo_2.png){width=width height=height}
+
+El valor 1 indica la probabilidad que tiene el modelo de que sea mayor a 2.5 el valor de t.
+El valor 2 debe ser mayor a 5.
+El valor 3 indica el R2, este debe ser mayor a 0.55
+El valor 4 indica el error encontrado en el modelo, (la distancia que hay del modelo al punto lejano)
+Por lo que para el modelo 2, las variables HGRAD, INC, aportan al modelo, en el caso de std. ERROR nos indica que el error es muy grande para este modelo, por lo que la variable UNEM, nos esta generando mucho ruido.
+
+
+![modelo_2](modelo_2.png){width=width height=height}
+
+El valor 1 indica la probabilidad que tiene el modelo de que sea mayor a 2.5 el valor de t.
+El valor 2 debe ser mayor a 5.
+El valor 3 indica el R2, este debe ser mayor a 0.55
+El valor 4 indica el error encontrado en el modelo, (la distancia que hay del modelo al punto lejano)
+Por lo que para el modelo 2, las variables HGRAD, INC, aportan al modelo, en el caso de std. ERROR nos indica que el error es muy grande para este modelo, por lo que la variable UNEM, nos esta generando mucho ruido.
+
+
+![modelo_3](modelo_3.png){width=width height=height}
+El valor 1 indica la probabilidad que tiene el modelo de que sea mayor a 2.5 el valor de t.
+El valor 2 debe ser mayor a 5.
+El valor 3 indica el R2, este debe ser mayor a 0.55
+El valor 4 indica el error encontrado en el modelo, (la distancia que hay del modelo al punto lejano)
+Por lo que para el modelo 2, la variable Months si es significante para el modelo, ya que cumple con estos parametros. 
+
+
