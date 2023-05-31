@@ -362,6 +362,6 @@ El valor 1 indica la probabilidad que tiene el modelo de que sea mayor a 2.5 el 
 El valor 2 debe ser mayor a 5.
 El valor 3 indica el R2, este debe ser mayor a 0.55
 El valor 4 indica el error encontrado en el modelo, (la distancia que hay del modelo al punto lejano)
-Por lo que para el modelo 2, la variable Months si es significante para el modelo, ya que cumple con estos parametros. 
+Por lo que para el modelo 3, la variable Months si es significante para el modelo, ya que cumple con estos parametros. 
 
 
